@@ -24,7 +24,7 @@ variable "postgres_secret" {
 variable "postgres_secret_name" {
   description = "Name of the Postgres Secret"
   type        = string
-  default     = "postgres-credentials"
+  default     = "postgresdb-credentials"
 }
 
 variable "postgres_recovery_window_in_days" {
@@ -43,7 +43,7 @@ variable "mongo_secret" {
 variable "mongo_secret_name" {
   description = "Name of the MongoDB Secret"
   type        = string
-  default     = "mongo-credentials"
+  default     = "mongodb-credentials"
 }
 
 variable "mongo_recovery_window_in_days" {
