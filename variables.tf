@@ -71,3 +71,43 @@ variable "redis_recovery_window_in_days" {
   type        = number
   default     = 0
 }
+
+####### AMQP Secret Variable #######
+
+variable "amqp_secret" {
+  description = "Credentials for RabbitMQ AMQP"
+  type        = map(string)
+  sensitive   = true
+}
+
+variable "amqp_secret_name" {
+  description = "Name of the AMQP Secret"
+  type        = string
+  default     = "amqp-credentials"
+}
+
+variable "amqp_recovery_window_in_days" {
+  description = "Recovery window in days for AMQP Secret deletion"
+  type        = number
+  default     = 0
+}
+
+####### PubSub (Kafka) Secret Variable #######
+
+variable "pubsub_secret" {
+  description = "Credentials for Kafka PubSub"
+  type        = map(string)
+  sensitive   = true
+}
+
+variable "pubsub_secret_name" {
+  description = "Name of the PubSub Secret"
+  type        = string
+  default     = "kafka-credentials"
+}
+
+variable "pubsub_recovery_window_in_days" {
+  description = "Recovery window in days for PubSub Secret deletion"
+  type        = number
+  default     = 0
+}
